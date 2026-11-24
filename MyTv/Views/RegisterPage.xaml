@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MyTv.ViewModels"
+    x:Class="MyTv.Views.RegisterPage"
+    x:DataType="vm:RegisterViewModel"
+    BackgroundColor="#17151F"
+    Title="Register">
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Label
+            Text="Create Account"
+            FontSize="32"
+            FontAttributes="Bold"
+            TextColor="#A78BFA"
+            HorizontalTextAlignment="Center"/>
+
+        <Entry
+            Placeholder="Username"
+            Text="{Binding Username}"
+            PlaceholderColor="Gray"
+            TextColor="White"
+            BackgroundColor="#302B3D"/>
+
+        <Entry
+            Placeholder="Password"
+            Text="{Binding Password}"
+            PlaceholderColor="Gray"
+            TextColor="White"
+            BackgroundColor="#302B3D"
+            IsPassword="True"/>
+
+        <Entry
+            Placeholder="Confirm Password"
+            Text="{Binding ConfirmPassword}"
+            PlaceholderColor="Gray"
+            TextColor="White"
+            BackgroundColor="#302B3D"
+            IsPassword="True"/>
+
+        <Button
+            Text="Register"
+            Command="{Binding RegisterCommand}"
+            BackgroundColor="#A78BFA"
+            TextColor="White"
+            CornerRadius="12"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MyTv.Views.WelcomePage"
+    xmlns:vm="clr-namespace:MyTv.ViewModels"
+x:DataType="vm:WelcomeViewModel"
+Title="Welcome"
+    BackgroundColor="#17151F">
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="25"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+        <Label
+           Text="{Binding Title}"
+            FontSize="48"
+            FontAttributes="Bold"
+            TextColor="#A78BFA"
+            HorizontalTextAlignment="Center"/>
+
+        <Label
+            Text="Discover your next favorite"
+            FontSize="22"
+            TextColor="White"
+            HorizontalTextAlignment="Center"/>
+
+        <Label
+            Text="{Binding Description}"
+            FontSize="16"
+            TextColor="LightGray"
+            HorizontalTextAlignment="Center"/>
+
+        <Button
+    Text="Login"
+    Command="{Binding GoToLoginCommand}"
+    BackgroundColor="#A78BFA"
+    TextColor="White"
+    CornerRadius="12"
+    WidthRequest="220"/>
+
+        <Button
+    Text="Register"
+    Command="{Binding GoToRegisterCommand}"
+    BackgroundColor="#302B3D"
+    TextColor="White"
+    CornerRadius="12"
+    WidthRequest="220"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>
