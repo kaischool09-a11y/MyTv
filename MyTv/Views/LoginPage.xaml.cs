@@ -8,7 +8,7 @@ public partial class LoginPage : ContentPage
     public LoginPage() : this(CreateViewModel())
     {
     }
-
+     
     private static LoginViewModel CreateViewModel()
     {
         var services = Application.Current?.Handler?.MauiContext?.Services;
